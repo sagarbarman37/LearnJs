@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entries Method</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="inputField">
+        <input type="text" name="" id="name">
+        <input type="email" name="" id="email">
+        <input type="password" name="" id="password">
+        <button>click</button>
+    </div>
+
+    <script>
+        const name = document.querySelector('#name')
+        const email = document.querySelector('#email')
+        const password = document.querySelector('#password')
+
+        const error = ['Name is Required', 'Email is Required', 'Password more than character']
+
+        // Create Array Object using ENTRIES METHODS
+        let errorObject = []
+        for (const [index, massage] of error.entries()) {
+            errorObject.push({id: index + 1, errorMassage: massage})
+        }
+        // console.log(errorObject);
+        
+        // set the placeholder with this created object
+        name.placeholder = errorObject[0].errorMassage
+        email.placeholder = errorObject[1].errorMassage
+        password.placeholder = errorObject[2].errorMassage
+        
+    </script>
+</body>
+</html>
