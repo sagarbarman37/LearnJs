@@ -40,6 +40,20 @@ names.forEach(name => {
     // console.log(`Hello mr. ${name}`);
 })
 
+const url = ['https://api.github.com/users/hiteshchoudhary/repos']
+url.forEach(api => {
+    fetch(api)
+        .then((res) => {
+            if (!res.ok) {
+                // console.log(res);
+                throw new Error(`featching not sucsessfull!! ${res.status}`)
+            }
+            return res.json()
+        })
+        // .then(data => {console.log(id)})
+        // .catch(error => console.error(error))
+})
+
 
 
 
