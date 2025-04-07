@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <div class="form">
+        <input type="text" class="input" >
+        <input type="text" class="input" >
+        <button>Show</button>
+    </div>
+    <div class="show"></div>
+
+<script>
+    const inputList = document.querySelectorAll('.input')
+    const button = document.querySelector('button')
+    const show = document.querySelector('.show')
+
+    button.addEventListener("click", () => {
+        let inputValue = [...inputList].map((input) => input.value)  // destructure the input and save the value in a variable
+
+        let filterValue = inputValue.filter(email => email.includes('@'))  // filter the value that '@' present or not      
+        show.innerHTML = ''   // empty the previous value
+        if(filterValue) {
+            filterValue.map((name,index) => {  // i need value and index thats why use map
+                show.innerHTML += `
+                <p>${index + 1}. ${name.toLowerCase()}</p>`
+            })
+                
+        }
+        inputList.forEach(input => input.value = '') // to Empty input field
+
+
+           // use Every Method
+        // if (inputValue.every(val => val !== '')) {   // check the all input are filled ot not
+
+            // map
+            // inputValue.map((name,index) => {
+            //     show.innerHTML += `
+            //     <p>${index + 1}. ${name.toUpperCase()}</p>
+            //     `
+            // })
+
+            // Entries
+            // use Iterator to show the value.
+            // for (const [index, name] of inputValue.entries()) {    // it also give index and value 
+            //     show.innerHTML += `
+            //     <p>${index + 1}. ${name}</p>
+            //     `
+            // }
+
+        //     console.log(inputValue)
+        // }
+
+        
+    })
+
+</script>
+</body>
+</html>
