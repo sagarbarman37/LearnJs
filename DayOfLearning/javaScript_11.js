@@ -15,7 +15,7 @@ const numbers = [1, 2, 7, 2, 3, 4, 5, 6,4, 7]
 // console.log(typeof value.join()); // string
 
 const animal = ['Dog', 'Cat', 'Bird', 'Wolf', 'Kangaru']
-// const result = animal.join() // "Dog,Cat,Bird,Wolf,Kangaru"
+// const result = animal.join() // "Dog,Cat,Bird,Wolf,Kangaru"  default
 const result = animal.join(' ') // "Dog Cat Bird Wolf Kangaru"
 // const result = animal.join('/') // "Dog/Cat/Bird/Wolf/Kangaru"
 // console.log(result); 
