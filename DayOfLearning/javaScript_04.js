@@ -20,7 +20,7 @@ let myTimeStamp = Date.now() // 1742297687862  mili-second
 // console.log(Math.floor(myTimeStamp/1000)); // 1742297821  Second
 
 
-const date = new Date();
+const date = new Date(); // 2025-03-18T16:46:09.028Z
 
 
 const [day, month, year] = [
@@ -39,7 +39,7 @@ const [seconds, minutes, hour] = [
     date.getFullYear()
 ]
 
-// console.log(hour, minutes, seconds);
+// console.log(hour, minutes, seconds);  //
 
 
 

@@ -21,6 +21,17 @@ const visits = [
   }, [])
 //   console.log(country) // [ India: 3, USA: 1, Germany: 1 ]
 
+//create Object from array using reduce method
+const arrToObj = ['a', 'b', 'c', 'd', 'e']
+const createObj = arrToObj.reduce((acc, curr, idx) => {
+  // acc[curr] = curr // { a: 'a', b: 'b', c: 'c', d: 'd', e: 'e' }
+    // acc[idx] = curr // { 0: 'a', 1: 'b', 2: 'c', 3: 'd', 4: 'e' }
+    // acc[curr] = idx // { a: 0, b: 1, c: 2, d: 3, e: 4 }
+    return acc  // return acc
+}, {})
+// console.log(typeof createObj)  // object
+console.log(createObj)  // { a: 'a', b: 'b', c: 'c', d: 'd', e: 'e' }
+
 const num = [5, 10, 15, 20, 25]
 
 const reduceRightMethod = num.reduceRight((acc, curr) => {
@@ -47,7 +58,7 @@ const reverced = greet.split('').reverse().join('')
 const amount = [33, 45, 423, 54, 345]
 const sliced = amount.slice(1, 3)
 // console.log(amount)  // [33, 45, 423, 54, 345]
-console.log(sliced)  // [ 33, 45 ]
+// console.log(sliced)  // [ 33, 45 ]
 
 
 let allItems = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];

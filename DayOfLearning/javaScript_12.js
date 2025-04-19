@@ -39,14 +39,14 @@ const users = [
     { name: 'Charlie', age: 35 }
 ];
 
-const userName = users.map(user => user.name)
-const userAge = users.map(user => user.age)
+const userName = users.map(user => user.name) // get name of each user
+const userAge = users.map(user => user.age)  // get age of each user
 // console.log(userName)  // [ 'Alice', 'Bob', 'Charlie' ]
 // console.log(userAge)  // [ 25, 30, 35 ]
 
 const score = [100, 200,  300, 400]
 const teamScore = score.map((score, index) => {
-   return `Team ${index + 1}: ${score}`
+   return `Team ${index + 1}: ${score}` 
 })
 
 // console.log(teamScore)  // [ 'Team 1: 100', 'Team 2: 200', 'Team 3: 300', 'Team 4: 400' ]
@@ -54,13 +54,13 @@ const teamScore = score.map((score, index) => {
 // Array.push()
 
 const pushArray = [1, 2, 3]
-const newLength = pushArray.push(4, 5)
+const newLength = pushArray.push(4, 5)  // add element to the end of array
 // console.log(pushArray); //[ 1, 2, 3, 4, 5 ]
 // console.log(newLength);  // 5
 
 // Array.pop()
 
 const balance = [100, 200,  300, 400]
-const remain = balance.pop()
+const remain = balance.pop()  // remove last element from array
 // console.log(remain)  // 400
 // console.log(balance)  //  [ 100, 200, 300 ]

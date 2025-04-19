@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arguments</title>
+</head>
+<body>
+    <div class="box">
+        <input type="text" name="" id="input">
+    </div>
+    <div class="show">
+        <p class="total"></p>
+    </div>
+
+<script>
+    const input = document.querySelector('#input')
+    const total = document.querySelector('.total')
+
+    document.addEventListener('input', (e) => {
+        let val = input.value;
+        let numbers = val.split('+').map(Number)  // return an array list, typeof list is Number
+        function add (...args) {
+            return args.reduce((acc, curr) => acc + curr, 0)
+        }
+        total.innerHTML = `Total: ${add(...numbers)}` //  
+        console.log(numbers)
+        e.preventDefault()
+    })
+</script>
+</body>
+</html>
