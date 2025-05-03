@@ -66,7 +66,7 @@ const users = {
 const employee = Object.create(users)
 employee.salary = 20000;
 if (Object.hasOwn(employee, 'salary')) {
-    // console.log(true)
+    // console.log(true)  // true, because salary is own property of employee
 }else {
     // console.log(false)
 }
@@ -77,4 +77,32 @@ for (const key in employee) {
         own.push(`${key} : ${employee[key]}`)
     }
 }
-// console.log(own)
+console.log(own)  // [ 'salary : 20000' ]
+
+
+// practice
+
+/* we have a string and we want if the string length is more than 7 then 
+ we want to slice the string and add ... at the end of the string */
+
+const str = 'hello, friends'
+
+function operation(string) {
+    if (string.length > 7) {
+       return str.slice(0, 8).concat("...")
+    }else {
+        return str;
+    }
+
+}
+console.log(operation(str))   // output:- hello, f...
+
+let num = 47
+function binaryNum (nums) {
+    return nums.toString(2)
+}
+// console.log(binaryNum(num))
+
+let binaryTo = ['1001110', '1100011', '11111', '1001110', '101111']
+const mapNum = binaryTo.map(num => parseInt(num, 2)).join("")
+// console.log(mapNum)

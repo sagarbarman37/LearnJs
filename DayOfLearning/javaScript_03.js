@@ -20,7 +20,8 @@ let a = Number.POSITVE_INFINITY;
 // console.log(a);
 
 const num = [35,23,46,1,354,35,56,42,];  // sort()
-const sortNum = num.sort((a,b) => a-b)
+const sortNum = num.sort((a,b) => a-b) // sort in ascending order
+// console.log(sortNum); // [1, 23, 35, 35, 42, 46, 354]
 const reNum = num.reverse()
 // console.log('original',num);
 // console.log(reNum);
@@ -32,13 +33,13 @@ let  mapMethod =  number.map(myfunc);
 function myfunc(val) {
   return val > 20;
 }
-// console.log(mapMethod);
+// console.log(mapMethod); // [45, 4, 9, 16, 25]
 
 let i, h = ''
-for(i = 0; i<5; i= i+2){
+for(i = 0; i<10; i= i+2){
     h += i
 }
-// console.log(h);
+// console.log(h);  
 
 const fruits = ['Apple', 'Banana', 'Orange'];
 for (x of fruits) {
